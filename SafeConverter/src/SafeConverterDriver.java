@@ -9,6 +9,7 @@ public class SafeConverterDriver {
 		
 		frame.getContentPane().add(dg.getContent());
 		frame.pack();
+		frame.setSize(500,500);
 		frame.setVisible(true);
 	}
 	

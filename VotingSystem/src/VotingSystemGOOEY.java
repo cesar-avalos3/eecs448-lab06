@@ -1,6 +1,7 @@
 	import java.awt.Component;
-	import java.awt.event.ActionEvent;
-	import java.awt.event.ActionListener;
+import java.awt.Dimension;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.IOException;
 
 import javax.swing.*;
@@ -29,7 +30,8 @@ public class VotingSystemGOOEY {
 			
 			candidates   = new SpinnerListModel(candidatesList);
 			candidatesSpinner   = new JSpinner(candidates);
-			
+			Dimension preferredSize = new Dimension(150, 50);
+			candidatesSpinner.setPreferredSize(preferredSize);
 			content = new JPanel();
 			
 			content.add(name);
@@ -65,6 +67,7 @@ public class VotingSystemGOOEY {
 		
 		public Component getContent()
 		{
+			candidatesSpinner.setSize(300,75);
 			return content;
 		}
 	}
